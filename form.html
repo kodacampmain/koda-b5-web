@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Latihan Form Koda 5" />
+    <title>Form Koda 5</title>
+  </head>
+  <body>
+    <header>Form Koda 5</header>
+    <main>
+      <form novalidate>
+        <section>
+          <label for="upload">
+            <img
+              src="https://blogger.googleusercontent.com/img/a/AVvXsEimZBnB1Lsea4ng-b1Q_j3B1XRkdz5r1rpNtaRO3vqdJi-GX3jNkkNAbM8k0U9mJD5bZtXKoL3Duk9eD0ZjsVXXih2lLDq54chx-bVBxIng76Aa0eCYPU9OmhFrToyCUpblqOgyzpgdq8FY6yUoGmO9fNsh8ym4oNZfwOBrkvlkpx-cec9y7AltJi7i"
+              alt="foto profil"
+              width="50"
+            />
+          </label>
+          <input type="file" name="" id="upload" hidden />
+        </section>
+        <input type="text" name="" id="" placeholder="Masukkan Username" />
+        <br />
+        <label for="umur">Umur</label>
+        <input type="number" name="" id="umur" />
+        <br />
+        <label for="pwd">Password</label>
+        <input type="password" name="pwd" id="pwd" placeholder="Masukkan Password" required />
+        <br />
+        <label for="email">Email</label>
+        <input type="email" name="" id="email" placeholder="mail@mail.com" required />
+        <br />
+        <label>Gender</label>
+        <section>
+          <input type="radio" name="gender" id="lk" />
+          <label for="lk">L</label>
+        </section>
+        <section>
+          <input type="radio" name="gender" id="pr" />
+          <label for="pr">P</label>
+        </section>
+        <br />
+        <label>Hobbies</label>
+        <section>
+          <input type="checkbox" name="gaming" id="gaming" />
+          <label for="gaming">Gaming</label>
+        </section>
+        <section>
+          <input type="checkbox" name="fishing" id="fishing" />
+          <label for="fishing">Fishing</label>
+        </section>
+        <section>
+          <input type="checkbox" name="reading" id="reading" />
+          <label for="reading">Reading</label>
+        </section>
+        <br />
+        <label for="kota">Pilih Kota</label>
+        <select name="kota" id="kota">
+          <option value="jakarta">Jakarta</option>
+          <option value="bandung">Bandung</option>
+          <option value="bogor">Bogor</option>
+          <option disabled selected>Pilih Kota</option>
+        </select>
+        <br />
+        <button>Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
