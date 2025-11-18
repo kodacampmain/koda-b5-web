@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Koda 5 CSS Practice</title>
+  </head>
+  <body>
+    <header>
+      <h1>Koda 5 CSS Practice</h1>
+    </header>
+
+    <main>
+      <section id="forms">
+        <h2>Forms & Inputs</h2>
+
+        <form id="signup-form">
+          <div class="field-group">
+            <label for="username">Username</label>
+            <input id="username" name="user-name" type="text" required placeholder="Enter username" />
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input id="email" name="user-email" type="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="field-group">
+            <label for="age">Age (optional)</label>
+            <input id="age" name="user-age" type="number" min="0" max="120" />
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password (invalid if short)</label>
+            <input id="password" name="user-password" type="password" minlength="8" required />
+          </div>
+
+          <div class="field-group">
+            <label>
+              <input type="checkbox" name="terms-checkbox" required />
+              I agree to the terms and conditions
+            </label>
+          </div>
+
+          <button type="submit" class="btn" data-role="primary">Submit</button>
+          <button type="reset" class="btn" data-role="secondary">Reset</button>
+        </form>
+      </section>
+
+      <section id="status-cards">
+        <h2>Cards with Status</h2>
+
+        <div class="card-container">
+          <article class="card" data-status="info">
+            <h3>Info Card</h3>
+            <p>This is an informational card.</p>
+            <button class="btn card-btn" data-role="primary">More Info</button>
+          </article>
+
+          <article class="card active" data-status="success">
+            <h3>Success Card</h3>
+            <p>Operation completed successfully.</p>
+            <button class="btn card-btn" data-role="primary">View Details</button>
+          </article>
+
+          <article class="card" data-status="error">
+            <h3>Error Card</h3>
+            <p>There was a critical error.</p>
+            <button class="btn card-btn" data-role="danger">Fix Now</button>
+          </article>
+
+          <article class="card" data-status="warning">
+            <h3>Warning Card</h3>
+            <p>Something might need your attention.</p>
+            <button class="btn card-btn" data-role="secondary">Dismiss</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="lists">
+        <h2>Lists & Menu Items</h2>
+
+        <h3>Simple List</h3>
+        <ul class="simple-list">
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+          <li>Fourth item</li>
+          <li>Fifth item</li>
+        </ul>
+
+        <h3>Nested List (for :has, :not, etc.)</h3>
+        <ul class="nested-list">
+          <li>Item A</li>
+          <li>
+            Item B
+            <ul class="sub-list">
+              <li>Child B1</li>
+              <li>Child B2</li>
+            </ul>
+          </li>
+          <li>Item C</li>
+          <li>
+            Item D
+            <ul class="sub-list">
+              <li>Child D1</li>
+            </ul>
+          </li>
+          <li>Item E</li>
+        </ul>
+      </section>
+
+      <section id="article-section">
+        <h2>Article & Paragraphs</h2>
+
+        <article class="post">
+          <h2>Article Title One</h2>
+          <p>First paragraph after h2.</p>
+          <p>Second paragraph after h2.</p>
+          <p>Third paragraph after h2.</p>
+
+          <h2>Article Title Two</h2>
+          <p>First paragraph after second h2.</p>
+          <p>Another paragraph in the same article.</p>
+        </article>
+
+        <article class="post">
+          <h2>Article with Only One Paragraph</h2>
+          <p class="single-paragraph">I am the only child paragraph in this article.</p>
+        </article>
+      </section>
+
+      <section id="messages">
+        <h2>Messages</h2>
+
+        <div class="message" data-type="info"><strong>Info:</strong> This is an informational message.</div>
+
+        <div class="message" data-type="warning"><strong>Warning:</strong> Your subscription will expire soon.</div>
+
+        <div class="message" data-type="error"><strong>Warning:</strong> An error has occurred. Please try again.</div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Contact us at <a href="mailto:support@example.com">support@example.com</a></p>
+    </footer>
+  </body>
+</html>
