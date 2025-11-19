@@ -5,21 +5,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Koda 5 html training" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Koda 5</title>
+    <style>
+      /* selector global */
+      * {
+        box-sizing: border-box;
+      }
+      /* selector element (nama_elemen) */
+      body {
+        background-color: lightcyan;
+      }
+      div {
+        font-size: 30px;
+      }
+      a {
+        color: blue;
+      }
+      /* selektor kelas (.nama_kelas) */
+      .satu {
+        text-decoration: line-through;
+      }
+      .dua {
+        /* background-color: aqua; */
+      }
+      .dua {
+        font-family: "Courier New", Courier, monospace;
+        /* background-color: antiquewhite; */
+      }
+      .satu,
+      .dua {
+        /* border-width: 2px;
+        border-style: solid;
+        border-color: black; */
+        border: 2px dotted red;
+        box-sizing: border-box;
+        width: 200px;
+      }
+      /* selektor id (#nama_id) */
+      #dua {
+        background-color: goldenrod;
+        font-size: 10px;
+      }
+    </style>
   </head>
   <body>
-    <span style="background-color: yellow; color: black">id_commit</span>
-    <div>1</div>
-    <div style="width: 100px">2</div>
-    <span>
-      <mark>
-        <font size="20">id_commit_2_konten_terpanjang_di_dunia</font>
-      </mark>
+    <span class="satu" style="background-color: yellow; color: black">id_commit</span>
+    <div class="satu dua">1</div>
+    <div style="display: inline; width: 50px" id="dua">2</div>
+
+    <span style="background-color: lightgrey; display: inline-block; width: 300px">
+      <span style="font-style: italic">id_commit</span>_2_konten_<span style="font-weight: 700">terpanjang</span
+      >_di_dunia
     </span>
+
     <nav>
       <a href="./about.html">About</a>
       <a href="https://jsonplaceholder.typicode.com/users">Users</a>
-      <a href="https://jsonplaceholder.typicode.com/users" target="_blank">Users in New Tab</a>
+      <a class="dua" href="https://jsonplaceholder.typicode.com/users" target="_blank">Users in New Tab</a>
     </nav>
     <nav>
       <a href="./google.html">Gugle</a>
