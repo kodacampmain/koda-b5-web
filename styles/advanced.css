@@ -1,0 +1,107 @@
+:root {
+  --bg-primary: red;
+  --bg-secondary: green;
+  --bg-tertiary: blue;
+  --base-spacing: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: lightgrey;
+}
+
+header {
+  background-color: lightcyan;
+  padding: calc(var(--base-spacing) * 2);
+}
+
+main {
+  padding: calc(var(--base-spacing) * 2);
+}
+.container a:focus {
+  outline: none;
+  & + div.hoverme {
+    display: block;
+  }
+}
+
+.container a:focus {
+  outline: none;
+}
+.container a:focus + div.hoverme {
+  display: block;
+}
+
+.hoverme {
+  display: none;
+  color: var(--bg-tertiary);
+  transition: all ease-in-out 0.7s;
+  &:active {
+    font-style: italic;
+  }
+  &::before {
+    content: "♡";
+  }
+  &::after {
+    content: "♡";
+  }
+}
+.hoverme:hover {
+  color: var(--bg-primary);
+}
+.hoverme:active {
+  color: yellow;
+}
+
+.stack {
+  width: 100px;
+  height: 50px;
+  background-color: var(--bg-secondary);
+  margin-top: 10px;
+  position: relative;
+  --base-distance: -3px;
+  &::first-letter {
+    color: red;
+  }
+  &::first-line {
+    color: white;
+  }
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 50px;
+    background-color: var(--bg-primary);
+    position: absolute;
+    bottom: calc(var(--base-distance) * 1);
+    right: calc(var(--base-distance) * 1);
+    z-index: -1;
+  }
+  &::after {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 50px;
+    background-color: var(--bg-tertiary);
+    position: absolute;
+    right: calc(var(--base-distance) * 2);
+    bottom: calc(var(--base-distance) * 2);
+    z-index: -2;
+  }
+}
+
+form {
+  margin-top: 10px;
+}
+
+input[type="number"] {
+  color: red;
+}
+
+input.special[type="number"] {
+  color: blue;
+}
