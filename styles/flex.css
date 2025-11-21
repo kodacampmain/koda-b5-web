@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header,
+main {
+  padding: 10px;
+}
+
+header {
+  background-color: aqua;
+}
+
+main {
+  background-color: lightgreen;
+  min-height: 100vh;
+  /* display: flex; */
+}
+
+div.flex {
+  border: 2px solid coral;
+  height: 150px;
+  background-color: black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: column-reverse; */
+  /* justify-content: space-evenly; */
+  /* gap: 1px; */
+  /* align-items: center;
+  justify-content: center; */
+  flex-wrap: wrap;
+  /* align-content: end; */
+  div {
+    /* height: 50px; */
+    /* width: 50px; */
+    border: 2px solid lightcyan;
+    background-color: bisque;
+    &:nth-child(1) {
+      /* flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 50px; */
+      flex: 1 0 50px;
+      /* justify-self: center; */
+      /* align-self: center; */
+    }
+    &:nth-child(5) {
+      /* flex-grow: 2;
+      flex-shrink: 2;
+      flex-basis: 50px; */
+      flex: 2 0 50px;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(6),
+    &:nth-child(7) {
+      flex-shrink: 0;
+      flex-basis: 50px;
+    }
+  }
+}
+/* .flex:nth-child(1) {
+  border-right: none;
+}
+.flex:nth-child(2) {
+  flex-direction: row-reverse;
+  border-left: none;
+} */
