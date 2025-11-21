@@ -64,6 +64,22 @@ header {
 
 .container {
   padding: 10px;
+  /* width: min(100%, 200px); */
+}
+
+.container:has(.text) {
+  background-color: cornflowerblue;
+}
+.container:has(ul) {
+  background-color: chartreuse;
+}
+.container:has(+ .container) {
+  border: 2px solid black;
+  border-radius: 5px 5px 0 0;
+}
+.container + .container {
+  border: 2px solid black;
+  border-radius: 0 0 5px 5px;
 }
 
 @media screen and (max-width: 768px) {
