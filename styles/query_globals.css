@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main {
+  padding: 10px;
+}
+
+.container {
+  padding: 2px;
+}
+
+main .container > .text,
+header {
+  color: goldenrod;
+  font-size: 25px;
+}
+
+.container:has(.text) {
+  background-color: cornflowerblue;
+}
+.container:has(ul) {
+  background-color: chartreuse;
+}
+.container:has(+ .container) {
+  border: 2px solid black;
+  border-radius: 5px 5px 0 0;
+}
+.container + .container {
+  border: 2px solid black;
+  border-radius: 0 0 5px 5px;
+}

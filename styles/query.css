@@ -1,0 +1,87 @@
+/* MOBILE FIRST */
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main {
+  padding: 10px;
+}
+
+.container {
+  padding: 2px;
+}
+
+.text,
+header {
+  color: goldenrod;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 640px) {
+  .text {
+    color: darkgrey;
+    font-size: 18px;
+    font-style: italic;
+  }
+  .container {
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    color: black;
+    font-size: 16px;
+  }
+  .container {
+    padding: 10px;
+  }
+} */
+
+/* PC FIRST */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main {
+  padding: 10px;
+}
+
+header {
+  color: goldenrod;
+}
+
+.text {
+  color: black;
+  font-size: 16px;
+}
+
+.container {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    color: darkgrey;
+    font-size: 18px;
+  }
+  .container {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .text {
+    color: goldenrod;
+    font-size: 25px;
+  }
+  .container {
+    padding: 2px;
+  }
+}
