@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Koda 5 Latihan Tabel" />
     <title>Tabel Koda 5</title>
+    <script src="/js/table.js" defer></script>
+    <style>
+      .judul {
+        text-decoration: underline;
+      }
+      input[type="password"]::-ms-reveal,
+      input[type="password"]::-ms-clear {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <header>Tabel Koda 5</header>
     <main>
+      <form>
+        <input type="text" id="username" placeholder="Insert Username" />
+        <input type="password" id="pwd" placeholder="Insert Password" />
+        <div>
+          <input type="checkbox" name="" id="show" checked="true" />
+          <label for="show">Show Password</label>
+        </div>
+        <button type="submit">submit</button>
+      </form>
       <article>
-        <table>
-          <caption>
+        <table id="simple-table">
+          <caption class="title">
             Contoh Tabel Sederhana
           </caption>
           <thead>
@@ -21,7 +40,9 @@
               <th scope="col">Kota</th>
             </tr>
           </thead>
+          <!-- beforebegin -->
           <tbody>
+            <!-- afterbegin -->
             <tr>
               <td>Fisti</td>
               <td>20</td>
@@ -37,12 +58,14 @@
               <td>20</td>
               <td>Bau-Bau</td>
             </tr>
+            <!-- beforeend -->
           </tbody>
+          <!-- afterend -->
         </table>
       </article>
       <article>
-        <table border="2 solid black">
-          <caption>
+        <table border="2 solid black" id="tabel">
+          <caption class="title">
             Daftar Buku di Perpustakaan
           </caption>
           <thead>
