@@ -66,7 +66,7 @@ function submitListener(event) {
     // base64
     if (input.name === "password") {
       const toUtf8 = new TextEncoder().encode(input.value);
-      const utf8toString = String.fromCharCode(toUtf8);
+      const utf8toString = String.fromCharCode(...toUtf8);
       const encode = window.btoa(utf8toString);
       // const decode = window.atob(encode);
       Object.assign(userInput, { [input.name]: encode });
