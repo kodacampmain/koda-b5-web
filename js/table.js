@@ -41,7 +41,7 @@ const form = document.querySelector("main > form:nth-child(1)");
 //   event.preventDefault();
 //   console.log("Hello");
 // };
-form.addEventListener("submit", function (event) {
+function submitListener(event) {
   event.preventDefault();
   const myForm = event.target;
   // console.log(form);
@@ -77,10 +77,11 @@ form.addEventListener("submit", function (event) {
   // console.log(pwdInput.value);
   // userInput.value = "";
   // pwdInput.value = "";
-});
+}
+form.addEventListener("submit", submitListener);
 
 const showPwdToggle = document.querySelector("#show");
-showPwdToggle.addEventListener("change", function (event) {
+showPwdToggle.addEventListener("change", (event) => {
   const isPasswordShown = event.target.checked;
   const pwdInput = document.querySelector("#pwd");
   if (isPasswordShown) {
@@ -94,6 +95,23 @@ showPwdToggle.addEventListener("change", function (event) {
   //   }
   //   pwdInput.setAttribute("type", "text");
 });
+
+const removeListener = document.querySelector('form > button[type="button"]:nth-of-type(3)');
+removeListener.onclick = function () {
+  const form = document.querySelector("main > form:nth-child(1)");
+  form.removeEventListener("submit", submitListener);
+};
+
+const addListener = document.querySelector('form > button[type="button"]:nth-of-type(2)');
+addListener.addEventListener("click", function (event) {
+  event.target.parentElement.addEventListener("submit", submitListener);
+});
+
+const fakeSubmit = document.querySelector('form > button[type="button"]:nth-of-type(4)');
+fakeSubmit.addEventListener("click", function (event) {
+  event.target.parentElement.dispatchEvent(new Event("submit"));
+});
+
 document.addEventListener("DOMContentLoaded", function (event) {
   const isPasswordShown = document.querySelector("#show").checked;
   const pwdInput = document.querySelector("#pwd");
