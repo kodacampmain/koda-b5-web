@@ -49,27 +49,52 @@ function submitListener(event) {
   // const userInput = myForm.querySelector("#username");
   const inputs = myForm.querySelectorAll('input:not([type="checkbox"])');
   let error = false;
+  const userInput = {};
+  const userForm = new FormData();
   inputs.forEach((input) => {
     // console.log(input);
     // if (input.type === "file") {
     //   const file = input.files[0];
     //   console.log(window.btoa(file));
+    // return
     // }
     if (input.value === "") {
       error = true;
       console.log(`${input.name} tidak boleh kosong`);
+      return;
     }
-    const encode = window.btoa(input.value);
-    const decode = window.atob(encode);
-    console.log(input.value, encode, decode);
+    // base64
+    if (input.name === "password") {
+      const toUtf8 = new TextEncoder().encode(input.value);
+      const utf8toString = String.fromCharCode(toUtf8);
+      const encode = window.btoa(utf8toString);
+      // const decode = window.atob(encode);
+      Object.assign(userInput, { [input.name]: encode });
+      userForm.append(input.name, encode);
+      input.value = "";
+      return;
+    }
+    Object.assign(userInput, { [input.name]: input.value });
+    userForm.append(input.name, input.value);
+    // reset value menjadi kosong
     input.value = "";
   });
-  if (!error) {
-    // navigation
-    window.location.href = "/index.html";
-    // redirect
-    // window.location.replace("/index.html");
-  }
+  const urlEncoded = new URLSearchParams(userInput);
+  // console.log(userInput);
+  const jsonString = JSON.stringify(userInput);
+  const jsonInput = JSON.parse(jsonString);
+  console.log(jsonString);
+  console.log(jsonInput);
+  console.log(urlEncoded.toString());
+  userForm.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+  });
+  // if (!error) {
+  // navigation
+  // window.location.href = "/index.html";
+  // redirect
+  // window.location.replace("/index.html");
+  // }
   // const userInput = myForm.username;
   // const pwdInput = myForm.pwd;
   // const pwdInput = myForm.querySelector("#pwd");

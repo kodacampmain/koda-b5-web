@@ -28,3 +28,9 @@ async function getRickAndMortyCharacters() {
 }
 
 getRickAndMortyCharacters();
+
+// const typeColor = {
+//   grass: "green",
+//   fire: "red",
+//   poison: "purple",
+// };
