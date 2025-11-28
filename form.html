@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Latihan Form Koda 5" />
     <title>Form Koda 5</title>
+    <script src="/js/form.js" defer></script>
+    <!-- <style>
+      label:has(+ section:has(input[type="checkbox"])) {
+        background-color: red;
+      }
+    </style> -->
   </head>
   <body>
     <header>Form Koda 5</header>
@@ -18,41 +24,43 @@
               width="50"
             />
           </label>
-          <input type="file" name="" id="upload" hidden />
+          <input type="file" name="profile" id="upload" hidden />
         </section>
-        <input type="text" name="" id="" placeholder="Masukkan Username" />
+        <input type="text" name="username" id="" placeholder="Masukkan Username" />
         <br />
         <label for="umur">Umur</label>
-        <input type="number" name="" id="umur" />
+        <input type="number" name="age" id="umur" />
         <br />
         <label for="pwd">Password</label>
         <input type="password" name="pwd" id="pwd" placeholder="Masukkan Password" required />
         <br />
         <label for="email">Email</label>
-        <input type="email" name="" id="email" placeholder="mail@mail.com" required />
+        <input type="email" name="email" id="email" placeholder="mail@mail.com" required />
         <br />
         <label>Gender</label>
         <section>
-          <input type="radio" name="gender" id="lk" />
+          <input type="radio" name="gender" id="lk" value="laki-laki" />
           <label for="lk">L</label>
         </section>
         <section>
-          <input type="radio" name="gender" id="pr" />
+          <input type="radio" name="gender" id="pr" value="perempuan" />
           <label for="pr">P</label>
         </section>
         <br />
-        <label>Hobbies</label>
-        <section>
-          <input type="checkbox" name="gaming" id="gaming" />
-          <label for="gaming">Gaming</label>
-        </section>
-        <section>
-          <input type="checkbox" name="fishing" id="fishing" />
-          <label for="fishing">Fishing</label>
-        </section>
-        <section>
-          <input type="checkbox" name="reading" id="reading" />
-          <label for="reading">Reading</label>
+        <section id="hobbies">
+          <label>Hobbies</label>
+          <section>
+            <input type="checkbox" name="gaming" id="gaming" />
+            <label for="gaming">Gaming</label>
+          </section>
+          <section>
+            <input type="checkbox" name="fishing" id="fishing" />
+            <label for="fishing">Fishing</label>
+          </section>
+          <section>
+            <input type="checkbox" name="reading" id="reading" />
+            <label for="reading">Reading</label>
+          </section>
         </section>
         <br />
         <label for="kota">Pilih Kota</label>
