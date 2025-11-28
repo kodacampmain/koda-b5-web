@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  min-height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: antiquewhite;
+}
+main,
+header {
+  padding: 5px;
+}
+div {
+  border: 2px solid black;
+  border-radius: 5px;
+}
