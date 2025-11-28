@@ -6,12 +6,30 @@
     <meta name="description" content="Learning JS Library" />
     <title>JS Library</title>
     <link rel="stylesheet" href="/styles/lib.css" />
+    <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/lib.js" type="module" defer></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-aquamarine: aquamarine;
+        --color-antiquewhite: antiquewhite;
+        --spacing-5: 5px;
+        --breakpoint-mds: 560px;
+      }
+    </style>
   </head>
   <body>
-    <header>Library JS</header>
-    <main></main>
+    <header class="bg-antiquewhite p-5">Library JS</header>
+    <main class="min-h-screen bg-aquamarine flex justify-center items-center">
+      <div class="bg-red-400 w-20 h-20 hover:bg-yellow-400 md:rounded-full mds:bg-blue-400"></div>
+      <div class="w-100 h-50 bg-antiquewhite">
+        <canvas id="grafik"></canvas>
+      </div>
+    </main>
   </body>
 </html>
