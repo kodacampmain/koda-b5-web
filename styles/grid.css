@@ -20,7 +20,6 @@ main {
 
 div.grid {
   border: 2px solid coral;
-  height: 350px;
   background-color: black;
   padding: 5px;
   display: grid;
